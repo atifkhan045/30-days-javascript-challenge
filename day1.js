@@ -37,4 +37,9 @@ num3 = 54;
 console.log(`new value ${num3}`);
 
 // activity 5
-// task 6 try reassigning a variable decalred with const and observe the error
+// task 6 try reassigning a variable decalred with const and observe the error 
+
+const num4 = 45;
+console.log(num4)
+num4 = 54;
+console.log(num4);
