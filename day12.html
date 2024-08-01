@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day12.css">
+</head>
+<body>
+
+    <!-- Acticity 1 : Selecting and Manipulating Elements -->
+
+    <!-- task 1 : select an html element by its Id and change it content -->
+    <h1 id="content">My Name Is Atif Khan</h1>
+    <button onclick="changeContent()">Change</button>
+
+    <!-- task 1 : select an html element by its class and change it background color -->
+    <div class="bg">
+       <button onclick="changeBg()">ChangeBg</button> 
+    </div>
+
+    <!-- Activity 2 : Creating and Appending Elements  -->
+
+    <!-- task 3 : create a new div element with some text content and append it to the body -->
+     <div id="existingDiv">
+        i am existing div
+     </div>
+    <!-- task 4 : create a new li element and add it to the existing ul list -->
+     <ul id="unorderedList">
+        i am unordered list 
+     </ul>
+
+     <!-- Activity 3 : Removin Elements -->
+      <!-- task 5 : Select an Html element and remove it from the dom -->
+       <h2 class="h2" >
+         I am H2 Tag and May be i will gone
+       </h2>
+       <button onclick="deleteH2()">Delete H2</button>
+
+       <!-- Task 6 : Remove a last child of specific element -->
+        <div id="parent">
+         <p>First Child</p>
+         <p>Second Child</p>
+         <p>LastChild</p>
+        </div>
+        <button onclick="RemoveLastChild()">Remove Last Child</button>
+
+
+        <!-- task 7 : Selct an html element and change one of it's attributes  -->
+      <div>
+        <img src="img.png" alt="img" class="img1">
+        <button onclick="changeImage()">Change Image</button>
+      </div>
+
+      <!-- task 8 : Add and remove css class to/from an Html element -->
+       <h3 id="h3">the color of this text is depend's on it's class so if the red class will added then the color of text will red otherwise class will remove so color will be black(a default color</h3>
+       <button onclick="addClass()">Add Yellow Class</button> 
+       <button onclick="removeClass()">Remove Yellow class</button>
+    <script src="day12.js"></script>
+</body>
+</html>
