@@ -100,10 +100,10 @@ async function handleRejectedPromise(promise) {
 }
 
 // Example usage
-const myPromis5 = new Promise((resolve, reject) => {
+const myPromise5 = new Promise((resolve, reject) => {
     setTimeout(() => {
         reject("Promise rejected with an error!");
     }, 2000); // Simulate a 2-second delay
 });
 
-handleRejectedPromise(myPromise);
+handleRejectedPromise(myPromise5);
