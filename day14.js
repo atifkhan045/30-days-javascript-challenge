@@ -64,3 +64,54 @@ function exampleFunction() {
 
 // Run the example function
 exampleFunction();
+
+
+// Activity 3 : Error Handling in Promises
+
+// Task 1 : Create a promise that randomly resolves and rejects. Use catch() to handle the rejection
+// and log an appropriate message to the console.
+
+const randomPromise = new Promise((resolve, reject) => {
+    const randomNumber = Math.random();
+    if (randomNumber > 0.5) {
+      resolve("resolved");
+    } else {
+      reject("reject");
+    }
+  });
+  
+  randomPromise
+    .then((message) => {
+      console.log(message);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  
+  // Task 2 : Use try-catch within an async function to handle errors from the promise that randomly
+  // resolves and rejects , and log the error messages.
+  // Create an async function
+  async function handleRandomPromise() {
+      try {
+          // Create the promise that randomly resolves or rejects
+          const result = await new Promise((resolve, reject) => {
+              const randomNumber = Math.random();
+              
+              if (randomNumber > 0.5) {
+                  resolve('The promise has been resolved successfully!');
+              } else {
+                  reject('The promise was rejected.');
+              }
+          });
+  
+          // Log the result if the promise is resolved
+          console.log('Try Resolve:',result);
+      } catch (error) {
+          // Handle the error if the promise is rejected
+          console.error('Catch Error:', error);
+      }
+  }
+  
+  // Call the async function
+  handleRandomPromise();
+  
